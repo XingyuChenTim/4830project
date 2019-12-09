@@ -41,6 +41,8 @@ public class TestCustomerOrder {
     Thread.sleep(1000);
     driver.findElement(By.name("inputEmail")).sendKeys("test@gmail.com");
     Thread.sleep(1000);
+    driver.findElement(By.name("inputPassword")).click();
+    Thread.sleep(1000);
     driver.findElement(By.name("inputPassword")).clear();
     Thread.sleep(1000);
     driver.findElement(By.name("inputPassword")).sendKeys("test");
@@ -49,16 +51,18 @@ public class TestCustomerOrder {
     Thread.sleep(1000);
     driver.findElement(By.linkText("Greetings! Start your order today »")).click();
     Thread.sleep(1000);
+    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Beef with broccoli'])[1]/following::button[1]")).click();
+    Thread.sleep(1000);
+    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Pork with bell pepper'])[1]/following::button[1]")).click();
+    Thread.sleep(1000);
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Eggs drop soup'])[1]/following::button[1]")).click();
     Thread.sleep(1000);
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Mongolian Beef'])[1]/following::button[1]")).click();
+    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Hot Sour Soup'])[1]/following::button[1]")).click();
     Thread.sleep(1000);
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Orange Chicken'])[1]/following::button[1]")).click();
-    Thread.sleep(1000);
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Seasame Chicken'])[1]/following::button[1]")).click();
+    driver.findElement(By.xpath("//*/text()[normalize-space(.)='']/parent::*")).click();
     Thread.sleep(1000);
     driver.findElement(By.id("submit")).click();
-    Thread.sleep(3000);
+    Thread.sleep(3000); 
   }
 
   @After

@@ -42,8 +42,6 @@ public class TestGuestPage {
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Pork'])[1]/following::span[1]")).click();
     Thread.sleep(1000);
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Beef'])[1]/following::span[1]")).click();
-    Thread.sleep(1000);
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Pineapple Online Restaurant'])[1]/following::span[1]")).click();
     Thread.sleep(3000);
   }
 

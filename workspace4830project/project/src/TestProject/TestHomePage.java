@@ -26,15 +26,15 @@ public class TestHomePage {
   @Test
   public void testHomePage() throws Exception {
     driver.get("http://ec2-18-217-7-101.us-east-2.compute.amazonaws.com:8080/project/home.html");
-    driver.findElement(By.linkText("If you are a new user.Please Check our Guest Page before you Register »")).click();
-    Thread.sleep(2000);
-    driver.findElement(By.linkText("Home Page")).click();
-    Thread.sleep(2000);
     driver.findElement(By.linkText("Log in Link")).click();
     Thread.sleep(2000);
     driver.findElement(By.linkText("Home Page")).click();
     Thread.sleep(2000);
     driver.findElement(By.linkText("Register Link")).click();
+    Thread.sleep(2000);
+    driver.findElement(By.linkText("Home Page")).click();
+    Thread.sleep(2000);
+    driver.findElement(By.linkText("If you are a new user.Please Check our Guest Page before you Register »")).click();
     Thread.sleep(2000);
     driver.findElement(By.linkText("Home Page")).click();
     Thread.sleep(3000);
